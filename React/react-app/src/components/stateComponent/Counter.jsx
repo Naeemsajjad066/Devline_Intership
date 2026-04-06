@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Heading from '../Heading';
 function Counter() {
     const [count,setCounter]=useState(0);
 
@@ -13,7 +13,9 @@ function Counter() {
         }
     }
   return (
-    <div style={{height:"250px", display:"flex" ,justifyContent:"center",alignItems:"center"}}>
+    <>
+          <Heading heading="State" />
+              <div style={{height:"250px", display:"flex" ,justifyContent:"center",alignItems:"center"}}>
       <div>
         <div style={{display:"flex",height:"230px",width:"300px",borderRadius:"15px",flexDirection:"column" ,justifyContent:"center",alignItems:"center",backgroundColor:"blue"}}>
         <h2 style={{color:"white"}}>Counter: {count}</h2>
@@ -25,6 +27,8 @@ function Counter() {
       </div>
       
     </div>
+    </>
+
   )
 }
 

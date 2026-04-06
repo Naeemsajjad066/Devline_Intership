@@ -1,0 +1,33 @@
+
+*{
+    left: 0;
+}
+article{
+    background-color: aquamarine;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+section{
+display: flex;
+flex-wrap: wrap;
+flex: 2;
+justify-content: center;
+align-items: center;
+min-height: 300px;
+}
+h2{
+    font-size: medium;
+}
+div{
+    width: 150px;
+    height: 150px;
+    background-color: #171992;
+    margin: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

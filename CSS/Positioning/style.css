@@ -1,0 +1,29 @@
+.stat{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+
+.rel{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(199, 63, 131);
+    position: relative;
+    top: 20px;
+    left: 10px;
+    margin: 5px;
+}
+.par{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(185, 107, 38);
+    position: relative;
+}
+.abs{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    background-color: rgb(29, 167, 50);
+    left:60px ;
+    top:20px;
+}

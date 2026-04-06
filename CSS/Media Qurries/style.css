@@ -1,0 +1,30 @@
+/* @media screen and (max-width:600px) {
+    body{
+        background-color: blue;
+    }
+    
+} */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px;
+}
+
+.box {
+  height: 200px;
+  background-color: rgb(6, 38, 38);
+}
+
+/* Smaller screens */
+@media screen and (max-width: 950x) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+@media screen and (max-width:600px){
+.container{
+    grid-template-columns: repeat(auto-fit,minmax(200,2fr));
+}
+    
+
+}

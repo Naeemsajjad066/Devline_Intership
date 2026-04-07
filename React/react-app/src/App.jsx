@@ -7,11 +7,12 @@ import Navbar from './components/Navbar/Navbar.jsx'
 import { Route, Routes } from "react-router-dom"
 import Hooks from './Pages/Hooks.jsx'
 import UseReducerPage from './Pages/Hooks/UseReducerPage.jsx'
-import UseCallbacksPage from './Pages/Hooks/UseCallbacksPage.jsx'
+import UseCallbacksPage from './Pages/Hooks/UseCallBack/UseCallbacksPage.jsx'
 import UseRefPage from './Pages/Hooks/UseRefPage.jsx'
 import UseEffectsComp from './components/UseEffects/UseEffectsComp.jsx'
 import Counter from './components/stateComponent/Counter.jsx'
 import UseMemoPage from './Pages/Hooks/UseMemoPage.jsx'
+import UseCallbacks from './Pages/Hooks/UseCallBack/UseCallbacks.jsx'
 
 
 
@@ -37,7 +38,7 @@ function App() {
           <Route path='useState' element={<Counter/>} />   
           <Route path='useEffects' element={<UseEffectsComp/>} />       
           <Route path='useReducer' element={<UseReducerPage/>} />
-          <Route path='useCallbacks' element={<UseCallbacksPage/>} />
+          <Route path='useCallbacks' element={<UseCallbacks/>} />
           <Route path='useRef' element={<UseRefPage/>} />
           <Route path='useMemo' element={<UseMemoPage/>}/>
         </Route>

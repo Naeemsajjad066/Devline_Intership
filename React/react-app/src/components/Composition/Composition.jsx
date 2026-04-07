@@ -3,7 +3,7 @@ import Heading from '../Heading'
 function Composition(props) {
   return (
     <>
-              <div style={{border:"2px solid blue", borderRadius:"10px",height:"200px",marginBottom:"10px"}}>
+              <div style={{border:"2px solid blue", borderRadius:"10px",height:"200px",marginBottom:"10px",padding:"10px",display:"flex",justifyContent:"center",alignItems:"center"}}>
       {props.children}
     </div>
     </>

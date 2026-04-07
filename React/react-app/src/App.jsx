@@ -8,8 +8,10 @@ import ConditionRendering from './components/ConditionalRendering/ConditionRende
 import Composition from './components/Composition/Composition.jsx'
 import Dashboard from './components/ContextApi/Dashboard.jsx'
 import { appContext } from './context/Context.js'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Composite from './components/Composition/Composite.jsx'
+import NewComponent from './components/NewComp.jsx'
+
 
 function App() {
 
@@ -22,6 +24,7 @@ const userdata={
   setTheme,
 }
 
+
   return (
     <appContext.Provider value={userdata}>
       <Parent />
@@ -30,6 +33,8 @@ const userdata={
       <ConditionRendering />
       <Composite/>
       <Dashboard/>
+     <NewComponent/>
+     <Heading heading={"props"}/>
     </appContext.Provider>
 
   )

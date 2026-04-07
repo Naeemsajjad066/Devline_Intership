@@ -12,7 +12,7 @@ console.log("Hello World 1 11")
   })
     return (
       <div>
-     <Heading heading="hi " />
+     <Heading heading="High Order Component" />
         {/* Pass all props down to the wrapped component */}
         <WrappedComponent {...props} />
       </div>

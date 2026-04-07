@@ -1,40 +1,48 @@
 
 import './App.css'
-import Parent from './components/propsComponents/Parent'
-import Heading from './components/Heading.jsx'
-import Counter from './components/stateComponent/Counter.jsx'
-import List_keys from './components/List&keys/List_keys.jsx'
-import ConditionRendering from './components/ConditionalRendering/ConditionRendering.jsx'
-import Composition from './components/Composition/Composition.jsx'
-import Dashboard from './components/ContextApi/Dashboard.jsx'
 import { appContext } from './context/Context.js'
 import { useEffect, useState } from 'react'
-import Composite from './components/Composition/Composite.jsx'
-import NewComponent from './components/NewComp.jsx'
+import Home from './Pages/Home.jsx'
+import Navbar from './components/Navbar/Navbar.jsx'
+import { Route, Routes } from "react-router-dom"
+import Hooks from './Pages/Hooks.jsx'
+import UseReducerPage from './Pages/Hooks/UseReducerPage.jsx'
+import UseCallbacksPage from './Pages/Hooks/UseCallbacksPage.jsx'
+import UseRefPage from './Pages/Hooks/UseRefPage.jsx'
+import UseEffectsComp from './components/UseEffects/UseEffectsComp.jsx'
+import Counter from './components/stateComponent/Counter.jsx'
+import UseMemoPage from './Pages/Hooks/UseMemoPage.jsx'
+
 
 
 function App() {
 
-const [theme,setTheme]=useState("dark")
+  const [theme, setTheme] = useState("dark")
 
-const userdata={
-  name:"naeem Sajjad",
-  role:"Developer",
-  theme,
-  setTheme,
-}
+  const userdata = {
+    name: "naeem Sajjad",
+    role: "Developer",
+    theme,
+    setTheme,
+  }
 
 
   return (
     <appContext.Provider value={userdata}>
-      <Parent />
-      <Counter />
-      <List_keys />
-      <ConditionRendering />
-      <Composite/>
-      <Dashboard/>
-     <NewComponent/>
-     <Heading heading={"props"}/>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path='/hooks' element={<Hooks />}>
+          <Route index element={<Counter />} />
+          <Route path='useState' element={<Counter/>} />   
+          <Route path='useEffects' element={<UseEffectsComp/>} />       
+          <Route path='useReducer' element={<UseReducerPage/>} />
+          <Route path='useCallbacks' element={<UseCallbacksPage/>} />
+          <Route path='useRef' element={<UseRefPage/>} />
+          <Route path='useMemo' element={<UseMemoPage/>}/>
+        </Route>
+      </Routes>
+
     </appContext.Provider>
 
   )

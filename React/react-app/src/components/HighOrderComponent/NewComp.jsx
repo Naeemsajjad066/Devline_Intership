@@ -7,8 +7,8 @@
 
 // export default NewComponent
 
-import Hoc from './HighOrderComponent/Hoc'
-import Loc from './HighOrderComponent/Loc'
+import Hoc from './Hoc'
+import Loc from './Loc'
 
 const WrappedLoc = Hoc(Loc)
 

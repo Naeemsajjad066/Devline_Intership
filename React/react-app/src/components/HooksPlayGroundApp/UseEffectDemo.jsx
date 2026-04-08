@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 export default function UseEffectDemo() {
   const [data, setData] = useState([]);
+  const [loading,setLoading]=useState(true)
 
   useEffect(() => {
     let ignore = false;
@@ -9,7 +10,10 @@ export default function UseEffectDemo() {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then((result) => {
-        if (!ignore) setData(result);
+        if (!ignore){
+          setData(result);
+          setLoading(false)
+        } 
       });
 
     return () => {
@@ -30,7 +34,8 @@ export default function UseEffectDemo() {
           margin: "0 auto",
         }}
       >
-        {data.slice(0, 5).map((user) => (
+        {loading?(<div><h3>Loading...</h3></div>):(
+          data.slice(0, 5).map((user) => (
           <div
             key={user.id}
             style={{
@@ -44,7 +49,8 @@ export default function UseEffectDemo() {
           >
             {user.name}
           </div>
-        ))}
+        )))}
+        {}
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react'
 import WithoutCallBack from './WithoutUseCallBack'
 import UseCallbacksPage from './UseCallbacksPage'
+import Heading from '../../../components/Heading'
 
 const UseCallbacks = () => {
   return (
@@ -9,6 +10,7 @@ const UseCallbacks = () => {
       maxWidth: "900px",
       margin: "0 auto"
     }}>
+        <Heading heading={"UseCallbacks"}/>
 
       {/* Without useCallback */}
       <div style={{

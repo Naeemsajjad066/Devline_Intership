@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react'
+import Heading from '../../components/Heading'
 
 const UseMemoPage = () => {
   const [count, setCount] = useState(1)
@@ -19,8 +20,7 @@ const UseMemoPage = () => {
       textAlign: "center",
       marginTop: "40px"
     }}>
-      <h1 style={{ marginBottom: "20px" }}>useMemo Demo</h1>
-
+        <Heading heading={"UseMemo"}/>
       <div style={{
         border: "1px solid #ddd",
         borderRadius: "10px",

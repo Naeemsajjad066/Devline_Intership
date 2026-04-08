@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import Heading from '../../components/Heading'
 
 const UseRefPage = () => {
   const counterRef = useRef(0)
@@ -13,6 +14,7 @@ const UseRefPage = () => {
 
   return (
     <div style={{ textAlign: "center", fontFamily: "Arial" }}>
+      <Heading heading={"UseRef"}/>
 
       <div style={{
         border: "1px solid #ddd",

@@ -13,6 +13,7 @@ import UseEffectsComp from './components/UseEffects/UseEffectsComp.jsx'
 import Counter from './components/stateComponent/Counter.jsx'
 import UseMemoPage from './Pages/Hooks/UseMemoPage.jsx'
 import UseCallbacks from './Pages/Hooks/UseCallBack/UseCallbacks.jsx'
+import HooksPlayGround from './Pages/HooksPlayGround.jsx'
 
 
 
@@ -42,6 +43,7 @@ function App() {
           <Route path='useRef' element={<UseRefPage/>} />
           <Route path='useMemo' element={<UseMemoPage/>}/>
         </Route>
+        <Route path='/hooksPlaygroundApp' element={<HooksPlayGround/>}/>
       </Routes>
 
     </appContext.Provider>

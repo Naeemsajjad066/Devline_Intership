@@ -1,7 +1,6 @@
 import { readData,writeData } from "../models/userModel.js";
 
 
-
 export const getUsers=(req,res)=>{
     const users=readData()
     res.json(users)

@@ -32,10 +32,11 @@ export default function UseEffectDemo() {
           borderRadius: "8px",
           maxWidth: "400px",
           margin: "0 auto",
+          overflowWrap:"scroll"
         }}
       >
         {loading?(<div><h3>Loading...</h3></div>):(
-          data.slice(0, 5).map((user) => (
+          data.map((user) => (
           <div
             key={user.id}
             style={{
@@ -45,6 +46,7 @@ export default function UseEffectDemo() {
               borderRadius: "6px",
               textAlign: "left",
               backgroundColor: "#fafafa",
+
             }}
           >
             {user.name}

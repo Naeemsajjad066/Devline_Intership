@@ -26,19 +26,23 @@ export default function UseMemoCallbackDemo() {
   const [count, setCount] = useState(0);
   const [toggle, setToggle] = useState(false);
 
+  // ✅ useMemo = expensive calculation optimization
   const expensiveValue = useMemo(() => {
     console.log("Expensive calculation");
     return count * 10;
   }, [count]);
 
+  // ✅ useCallback = stable function reference
   const handleClick = useCallback(() => {
     console.log("Child clicked");
-    setCount(count+1)
+    setCount((prev) => prev + 1); // FIXED (no stale state issue)
   }, []);
 
   return (
     <div style={{ textAlign: "center" }}>
-      <h2 style={{ marginBottom: "20px" }}>useMemo + useCallback Demo</h2>
+      <h2 style={{ marginBottom: "20px" }}>
+        useMemo + useCallback Demo (Performance Optimization)
+      </h2>
 
       {/* Stats Box */}
       <div
@@ -59,7 +63,7 @@ export default function UseMemoCallbackDemo() {
       {/* Buttons Box */}
       <div style={{ marginBottom: "15px" }}>
         <button
-          onClick={() => setCount(count + 1)}
+          onClick={() => setCount((c) => c + 1)}
           style={{
             marginRight: "10px",
             padding: "8px 12px",
@@ -74,7 +78,7 @@ export default function UseMemoCallbackDemo() {
         </button>
 
         <button
-          onClick={() => setToggle(!toggle)}
+          onClick={() => setToggle((t) => !t)}
           style={{
             padding: "8px 12px",
             border: "none",
